@@ -45,6 +45,7 @@ export default class LoginScreen extends React.Component {
           <TextInput
               placeholder="programmer@whitehatjr.com"
               placeholderTextColor = "#ffff"
+              keyboardType ='email-address'
               onChangeText= {(emailText)=>{
                   this.setState({
                       email: emailText
@@ -56,6 +57,7 @@ export default class LoginScreen extends React.Component {
           <TextInput
               placeholder="password"
               placeholderTextColor = "#ffff"
+              keyboardType ='email-address'
               onChangeText= {(passwordText)=>{
                   this.setState({
                       password: passwordText
@@ -72,12 +74,12 @@ export default class LoginScreen extends React.Component {
             onPress = {async()=>{
               var email  = await this.state.email;
               var password = await this.state.password
-              //firebase.auth().signInWithEmailAndPassword(email, password)
+              firebase.auth().signInWithEmailAndPassword(email, password)
               //firebase.auth().signInWithEmailAndPassword(emailId, password)
               //firebase.auth().signWithEmailAndPassword(email, password)
               //firebase.auth().signInWithEmailAndPassword()
               .then(()=>{
-                //this.props.navigation.navigate('WriteStory')
+                this.props.navigation.navigate('WriteStory')
                 //this.props.navigation.navigate('writeStory')
                 //this.props.navigate('WriteStory')
                 //this.props.navigate.navigation('WriteStory')
@@ -102,13 +104,14 @@ export default class LoginScreen extends React.Component {
 const styles = StyleSheet.create({
   container:{
     flex:1,
-    backgroundColor:'#3c6382'
+    backgroundColor:'#977fd7'
   },
   title:{
     fontWeight:"normal",
     fontSize:43,
     padding:25,
-    color:'#ffff'
+    color:'#ffff',
+    marginTop: 35
   },
   image:{
     width:"60%",
@@ -129,21 +132,25 @@ const styles = StyleSheet.create({
   },
   textInput : {
     width:"70%",
-    height: "8%",
+    height: "15%",
     borderWidth:2,
     borderColor:'#ffff',
+    justifyContent:'center',
+    alignItems:'center',
     padding:10,
     marginBottom:10,
-    borderRadius:10
+    borderRadius:20,
+    marginTop: 25
   },
   button:{
-    width:"75%",
-    height:"11%",
+    width:"45%",
+    height:"21%",
     justifyContent:'center',
     alignItems:'center',
     borderWidth:2,
     borderColor:'#ffff',
-    borderRadius:15
+    borderRadius:35,
+    marginTop: 120,
   },
   buttonText:{
     color:'white',
