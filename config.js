@@ -1,21 +1,23 @@
 import firebase from 'firebase'
-require("@firebase/firestore")
+// require("@firebase/firestore")
 
 
 // Initialize Firebase
 var firebaseConfig = {
-    apiKey: "AIzaSyAMW87I3aehUsTmQ-LXmNvxw8QZ1e0Xwto",
-    authDomain: "bed-time-stories-805e9.firebaseapp.com",
-    databaseURL: "https://bed-time-stories-805e9.firebaseio.com",
-    projectId: "bed-time-stories-805e9",
-    storageBucket: "bed-time-stories-805e9.appspot.com",
-    messagingSenderId: "74595764582",
-    appId: "1:74595764582:web:9a930873bddda1e548e0a7",
-    measurementId: "G-1X269F7P47"
+    apiKey: "AIzaSyCAi-7cXhqWbKf8cmvcCMy4IlAoDzzaOV4",
+  authDomain: "bedtime-stories-eed65.firebaseapp.com",
+  projectId: "bedtime-stories-eed65",
+  storageBucket: "bedtime-stories-eed65.appspot.com",
+  messagingSenderId: "820040718253",
+  appId: "1:820040718253:web:b04c5731efb3462b5e7324"
   };
 
 
 // Initialize Firebase
-firebase.initializeApp(firebaseConfig);
+if (!firebase.apps.length) {
+   firebase.initializeApp(firebaseConfig);
+}else {
+   firebase.app(); // if already initialized, use that one
+}
 
 export default  firebase.firestore()
