@@ -47,8 +47,8 @@ const SwitchNavigator = createSwitchNavigator({
   //LoginScreen : LoginScreen
   //TabNavigator : TabNavigator
 
-  //LoginScreen : LoginScreen,
-  //TabNavigator : TabNavigator
+  LoginScreen : LoginScreen,
+  TabNavigator : TabNavigator
 
   
   //TabNavigator : TabNavigator,
@@ -60,11 +60,11 @@ const SwitchNavigator = createSwitchNavigator({
 
 const AppContainer = createAppContainer(SwitchNavigator);
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
+// const styles = StyleSheet.create({
+//   container: {
+//     flex: 1,
+//     backgroundColor: '#fff',
+//     alignItems: 'center',
+//     justifyContent: 'center',
+//   },
+// });
